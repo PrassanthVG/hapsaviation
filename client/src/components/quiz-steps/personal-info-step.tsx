@@ -182,7 +182,7 @@ export default function PersonalInfoStep({ onBack, onNext }: PersonalInfoStepPro
                     <FormLabel className="text-sm font-medium text-gray-800">
                       Education Qualification <span className="text-red-500">*</span>
                     </FormLabel>
-                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <Select onValueChange={field.onChange} value={field.value}>
                       <FormControl>
                         <SelectTrigger className="form-select">
                           <SelectValue placeholder="Select your qualification" />
