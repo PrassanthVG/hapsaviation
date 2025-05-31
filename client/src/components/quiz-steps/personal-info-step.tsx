@@ -11,7 +11,14 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { PersonalData } from "@/pages/quiz";
+interface PersonalData {
+  fullName: string;
+  phone: string;
+  email: string;
+  parentName: string;
+  parentOccupation: string;
+  education: string;
+}
 
 interface PersonalInfoStepProps {
   onBack: () => void;
@@ -26,17 +33,11 @@ export default function PersonalInfoStep({ onBack, onNext }: PersonalInfoStepPro
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      firstName: "",
-      lastName: "",
-      email: "",
+      fullName: "",
       phone: "",
-      dateOfBirth: "",
-      gender: "",
-      address: "",
-      city: "",
-      state: "",
-      zipCode: "",
-      country: "",
+      email: "",
+      parentName: "",
+      parentOccupation: "",
       education: "",
     },
   });
@@ -95,46 +96,14 @@ export default function PersonalInfoStep({ onBack, onNext }: PersonalInfoStepPro
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <FormField
                 control={form.control}
-                name="firstName"
+                name="fullName"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="text-sm font-medium text-gray-800">
-                      First Name <span className="text-red-500">*</span>
+                      Full Name <span className="text-red-500">*</span>
                     </FormLabel>
                     <FormControl>
-                      <Input {...field} className="form-input" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="lastName"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-sm font-medium text-gray-800">
-                      Last Name <span className="text-red-500">*</span>
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} className="form-input" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-sm font-medium text-gray-800">
-                      Email Address <span className="text-red-500">*</span>
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} type="email" className="form-input" />
+                      <Input {...field} className="form-input" placeholder="Enter your full name" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -150,7 +119,7 @@ export default function PersonalInfoStep({ onBack, onNext }: PersonalInfoStepPro
                       Phone Number <span className="text-red-500">*</span>
                     </FormLabel>
                     <FormControl>
-                      <Input {...field} type="tel" className="form-input" />
+                      <Input {...field} type="tel" className="form-input" placeholder="+91 XXXXX XXXXX" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -159,14 +128,14 @@ export default function PersonalInfoStep({ onBack, onNext }: PersonalInfoStepPro
 
               <FormField
                 control={form.control}
-                name="dateOfBirth"
+                name="email"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="text-sm font-medium text-gray-800">
-                      Date of Birth <span className="text-red-500">*</span>
+                      Email Address <span className="text-red-500">*</span>
                     </FormLabel>
                     <FormControl>
-                      <Input {...field} type="date" className="form-input" />
+                      <Input {...field} type="email" className="form-input" placeholder="your.email@example.com" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -175,38 +144,14 @@ export default function PersonalInfoStep({ onBack, onNext }: PersonalInfoStepPro
 
               <FormField
                 control={form.control}
-                name="gender"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-sm font-medium text-gray-800">Gender</FormLabel>
-                    <Select onValueChange={field.onChange} defaultValue={field.value}>
-                      <FormControl>
-                        <SelectTrigger className="form-select">
-                          <SelectValue placeholder="Select Gender" />
-                        </SelectTrigger>
-                      </FormControl>
-                      <SelectContent>
-                        <SelectItem value="male">Male</SelectItem>
-                        <SelectItem value="female">Female</SelectItem>
-                        <SelectItem value="other">Other</SelectItem>
-                        <SelectItem value="prefer-not-to-say">Prefer not to say</SelectItem>
-                      </SelectContent>
-                    </Select>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="address"
+                name="parentName"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="text-sm font-medium text-gray-800">
-                      Address <span className="text-red-500">*</span>
+                      Father/Mother's Name <span className="text-red-500">*</span>
                     </FormLabel>
                     <FormControl>
-                      <Input {...field} className="form-input" />
+                      <Input {...field} className="form-input" placeholder="Enter parent's name" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -215,78 +160,15 @@ export default function PersonalInfoStep({ onBack, onNext }: PersonalInfoStepPro
 
               <FormField
                 control={form.control}
-                name="city"
+                name="parentOccupation"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="text-sm font-medium text-gray-800">
-                      City <span className="text-red-500">*</span>
+                      Father/Mother's Occupation <span className="text-red-500">*</span>
                     </FormLabel>
                     <FormControl>
-                      <Input {...field} className="form-input" />
+                      <Input {...field} className="form-input" placeholder="Enter parent's occupation" />
                     </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="state"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-sm font-medium text-gray-800">
-                      State/Province <span className="text-red-500">*</span>
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} className="form-input" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="zipCode"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-sm font-medium text-gray-800">
-                      ZIP/Postal Code <span className="text-red-500">*</span>
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} className="form-input" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="country"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-sm font-medium text-gray-800">
-                      Country <span className="text-red-500">*</span>
-                    </FormLabel>
-                    <Select onValueChange={field.onChange} defaultValue={field.value}>
-                      <FormControl>
-                        <SelectTrigger className="form-select">
-                          <SelectValue placeholder="Select Country" />
-                        </SelectTrigger>
-                      </FormControl>
-                      <SelectContent>
-                        <SelectItem value="us">United States</SelectItem>
-                        <SelectItem value="ca">Canada</SelectItem>
-                        <SelectItem value="uk">United Kingdom</SelectItem>
-                        <SelectItem value="au">Australia</SelectItem>
-                        <SelectItem value="de">Germany</SelectItem>
-                        <SelectItem value="fr">France</SelectItem>
-                        <SelectItem value="in">India</SelectItem>
-                        <SelectItem value="jp">Japan</SelectItem>
-                        <SelectItem value="other">Other</SelectItem>
-                      </SelectContent>
-                    </Select>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -298,20 +180,19 @@ export default function PersonalInfoStep({ onBack, onNext }: PersonalInfoStepPro
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="text-sm font-medium text-gray-800">
-                      Highest Education Level <span className="text-red-500">*</span>
+                      Education Qualification <span className="text-red-500">*</span>
                     </FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger className="form-select">
-                          <SelectValue placeholder="Select Education Level" />
+                          <SelectValue placeholder="Select your qualification" />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        <SelectItem value="high-school">High School Diploma</SelectItem>
-                        <SelectItem value="associate">Associate Degree</SelectItem>
-                        <SelectItem value="bachelor">Bachelor's Degree</SelectItem>
-                        <SelectItem value="master">Master's Degree</SelectItem>
-                        <SelectItem value="doctoral">Doctoral Degree</SelectItem>
+                        <SelectItem value="10th">10th</SelectItem>
+                        <SelectItem value="diploma">Diploma</SelectItem>
+                        <SelectItem value="10+2">10+2</SelectItem>
+                        <SelectItem value="bachelors">Bachelor's Degree</SelectItem>
                         <SelectItem value="other">Other</SelectItem>
                       </SelectContent>
                     </Select>
@@ -346,13 +227,13 @@ export default function PersonalInfoStep({ onBack, onNext }: PersonalInfoStepPro
           className="rounded-xl p-5 mt-6 text-center"
           style={{ backgroundColor: "#f9fafb" }}
         >
-          <p className="text-gray-600 mb-3">Need assistance? Contact us:</p>
-          <a href="mailto:admissions@hapsaviation.edu" className="text-blue-600 font-medium hover:underline">
-            admissions@hapsaviation.edu
+          <p className="text-gray-600 mb-3">In case of any doubts you can contact us at</p>
+          <a href="tel:+919945244270" className="text-blue-600 font-medium hover:underline">
+            +91 99452 44270
           </a>
-          <span className="text-gray-400 mx-2">|</span>
-          <a href="tel:+1-555-AVIATION" className="text-blue-600 font-medium hover:underline">
-            +1-555-AVIATION
+          <span className="text-gray-400 mx-2">/</span>
+          <a href="mailto:marketing@hapsaviation.com" className="text-blue-600 font-medium hover:underline">
+            marketing@hapsaviation.com
           </a>
         </div>
       </CardContent>

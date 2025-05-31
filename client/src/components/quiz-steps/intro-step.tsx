@@ -23,10 +23,12 @@ export default function IntroStep({ onNext }: IntroStepProps) {
             ℹ️
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-            Scholarship Entrance Test Overview
+            Welcome to the HAPS Aviation Institute CPL Scholarship Entrance Test!
           </h2>
           <p className="text-base md:text-lg text-gray-600 mb-8">
-            Welcome to HAPS Aviation Institute's CPL scholarship entrance test. This comprehensive assessment will evaluate your knowledge and readiness for our Commercial Pilot License program.
+            This test is your first step to join our 4-day free trial and scholarship training program. 
+            It helps us understand your current knowledge and passion for aviation, while also qualifying 
+            you for the scholarship opportunity.
           </p>
         </div>
 
@@ -36,7 +38,7 @@ export default function IntroStep({ onNext }: IntroStepProps) {
         >
           <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
             <span className="mr-2">📋</span>
-            Test Process
+            Process Overview:
           </h3>
           <div className="space-y-4">
             <div className="flex items-start">
@@ -47,8 +49,7 @@ export default function IntroStep({ onNext }: IntroStepProps) {
                 1
               </div>
               <div>
-                <strong>Personal Information</strong><br />
-                Provide your basic details and contact information for scholarship application.
+                Complete this online Entrance & Eligibility Test (30 questions, 30 mins). This is a mix of aviation basics, situational questions, and motivation.
               </div>
             </div>
             <div className="flex items-start">
@@ -59,8 +60,7 @@ export default function IntroStep({ onNext }: IntroStepProps) {
                 2
               </div>
               <div>
-                <strong>Aviation Knowledge Test</strong><br />
-                Complete a 20-question multiple-choice test covering aviation fundamentals, regulations, and safety procedures. Time limit: 30 minutes.
+                Once you pass, you will be invited to a 4-day free trial and scholarship training class, where you will get hands-on exposure to pilot training essentials, study materials, and mentorship.
               </div>
             </div>
             <div className="flex items-start">
@@ -71,11 +71,26 @@ export default function IntroStep({ onNext }: IntroStepProps) {
                 3
               </div>
               <div>
-                <strong>Results & Next Steps</strong><br />
-                View your test score and receive information about the next phase of the scholarship application process.
+                After completing the trial class, you will appear for a final scholarship exam to compete for available scholarship seats.
+              </div>
+            </div>
+            <div className="flex items-start">
+              <div 
+                className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white mr-3 mt-0.5 flex-shrink-0"
+                style={{ backgroundColor: "#1A4FD3" }}
+              >
+                4
+              </div>
+              <div>
+                Successful candidates will be offered admission into the HAPS Aviation Institute CPL program with scholarship benefits.
               </div>
             </div>
           </div>
+          
+          <p style={{ textAlign: "center", color: "#666", marginTop: "32px", marginBottom: "32px" }}>
+            This process helps us identify motivated and capable candidates who are genuinely interested in a flying career. 
+            It also allows you to experience the training before committing.
+          </p>
         </div>
 
         <div 
@@ -98,7 +113,7 @@ export default function IntroStep({ onNext }: IntroStepProps) {
             minHeight: "48px"
           }}
         >
-          Begin Application
+          🚀 Start my pilot journey
         </Button>
       </CardContent>
     </Card>
