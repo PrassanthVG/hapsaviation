@@ -4,24 +4,18 @@ import { z } from "zod";
 
 export const personalSubmissions = pgTable("personal_submissions", {
   id: serial("id").primaryKey(),
-  firstName: text("first_name").notNull(),
-  lastName: text("last_name").notNull(),
-  email: text("email").notNull(),
+  fullName: text("full_name").notNull(),
   phone: text("phone").notNull(),
-  dateOfBirth: text("date_of_birth").notNull(),
-  gender: text("gender"),
-  address: text("address").notNull(),
-  city: text("city").notNull(),
-  state: text("state").notNull(),
-  zipCode: text("zip_code").notNull(),
-  country: text("country").notNull(),
+  email: text("email").notNull(),
+  parentName: text("parent_name").notNull(),
+  parentOccupation: text("parent_occupation").notNull(),
   education: text("education").notNull(),
   submittedAt: timestamp("submitted_at").notNull().defaultNow(),
 });
 
 export const testResults = pgTable("test_results", {
   id: serial("id").primaryKey(),
-  personalSubmissionId: integer("personal_submission_id"),
+  personalSubmissionId: integer("personal_submission_id").notNull(),
   score: integer("score").notNull(),
   totalQuestions: integer("total_questions").notNull(),
   percentage: integer("percentage").notNull(),

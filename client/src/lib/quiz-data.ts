@@ -7,244 +7,217 @@ export interface QuizQuestion {
 }
 
 export const quizQuestions: QuizQuestion[] = [
+  // CPL & Aviation Basics (20 Questions)
   {
     id: 1,
-    section: "Aviation Fundamentals",
-    question: "What is the standard atmospheric pressure at sea level?",
-    options: [
-      "29.92 inches of mercury",
-      "30.00 inches of mercury", 
-      "28.50 inches of mercury",
-      "31.00 inches of mercury"
-    ],
+    section: "CPL & Aviation Basics",
+    question: "What is the full form of CPL in aviation?",
+    options: ["Commercial Pilot License", "Civil Pilot License", "Certified Private License", "Commercial Passenger Line"],
     correct: 0
   },
   {
     id: 2,
-    section: "Aviation Fundamentals",
-    question: "Which flight control surface is primarily responsible for controlling pitch?",
-    options: [
-      "Rudder",
-      "Ailerons", 
-      "Elevator",
-      "Flaps"
-    ],
-    correct: 2
+    section: "CPL & Aviation Basics",
+    question: "What is the minimum age to apply for a CPL in India?",
+    options: ["17", "18", "21", "25"],
+    correct: 1
   },
   {
     id: 3,
-    section: "Navigation",
-    question: "What does VOR stand for in aviation navigation?",
-    options: [
-      "Visual Omni Range",
-      "VHF Omnidirectional Range", 
-      "Variable Omni Radio",
-      "Vertical Orientation Reference"
-    ],
-    correct: 1
+    section: "CPL & Aviation Basics",
+    question: "How many total flying hours are required to be eligible for CPL in India?",
+    options: ["100 hours", "150 hours", "200 hours", "250 hours"],
+    correct: 2
   },
   {
     id: 4,
-    section: "Regulations",
-    question: "What is the minimum altitude for VFR flight over congested areas?",
-    options: [
-      "500 feet above the highest obstacle",
-      "1,000 feet above the highest obstacle within 2,000 feet horizontal", 
-      "1,500 feet above ground level",
-      "2,000 feet above ground level"
-    ],
-    correct: 1
+    section: "CPL & Aviation Basics",
+    question: "What are the mandatory subjects you must pass for a CPL?",
+    options: ["Geography, Chemistry", "Physics, Maths", "Air Regulation, Navigation, Meteorology", "Biology, History"],
+    correct: 2
   },
   {
     id: 5,
-    section: "Weather",
-    question: "What type of weather is typically associated with a cold front?",
-    options: [
-      "Gradual temperature decrease with light rain",
-      "Sudden temperature drop with thunderstorms", 
-      "Warm temperatures with clear skies",
-      "Fog and low visibility"
-    ],
-    correct: 1
-  },
-  {
-    id: 6,
-    section: "Aircraft Systems",
-    question: "What is the purpose of the pitot tube?",
-    options: [
-      "Measure static air pressure",
-      "Measure dynamic air pressure", 
-      "Measure air temperature",
-      "Measure wind direction"
-    ],
-    correct: 1
-  },
-  {
-    id: 7,
-    section: "Safety",
-    question: "What should a pilot do if encountering wake turbulence from a larger aircraft?",
-    options: [
-      "Maintain current altitude and heading",
-      "Climb immediately to avoid the wake", 
-      "Descend below the flight path of the larger aircraft",
-      "Turn away from the flight path and adjust altitude"
-    ],
-    correct: 3
-  },
-  {
-    id: 8,
-    section: "Regulations",
-    question: "What is the maximum speed allowed in Class B airspace below 10,000 feet?",
-    options: [
-      "200 knots",
-      "250 knots", 
-      "300 knots",
-      "No speed limit"
-    ],
-    correct: 1
-  },
-  {
-    id: 9,
-    section: "Aviation Fundamentals",
-    question: "What are the four fundamental forces acting on an aircraft in flight?",
-    options: [
-      "Lift, Weight, Thrust, Drag",
-      "Lift, Gravity, Power, Resistance", 
-      "Thrust, Weight, Speed, Direction",
-      "Power, Drag, Lift, Momentum"
-    ],
+    section: "CPL & Aviation Basics",
+    question: "DGCA stands for:",
+    options: ["Directorate General of Civil Aviation", "Delhi General Cargo Authority", "Department of Global Civil Aircraft", "Directorate of Government Charter Aircraft"],
     correct: 0
   },
   {
-    id: 10,
-    section: "Navigation",
-    question: "How many satellites are required for a GPS to determine position?",
-    options: [
-      "2 satellites",
-      "3 satellites", 
-      "4 satellites",
-      "5 satellites"
-    ],
+    id: 6,
+    section: "CPL & Aviation Basics",
+    question: "What is a logbook used for in aviation?",
+    options: ["To log aircraft speed", "To track passenger data", "To record flight hours and experience", "To save emergency contacts"],
     correct: 2
+  },
+  {
+    id: 7,
+    section: "CPL & Aviation Basics",
+    question: "Which document allows you to fly solo as a student pilot?",
+    options: ["DGCA Letter", "Student Pilot License", "CPL", "Ground School Certificate"],
+    correct: 1
+  },
+  {
+    id: 8,
+    section: "CPL & Aviation Basics",
+    question: "What is the purpose of a checkride?",
+    options: ["To go on vacation", "To test an aircraft", "To evaluate a pilot's skill for licensing", "To collect weather data"],
+    correct: 2
+  },
+  {
+    id: 9,
+    section: "CPL & Aviation Basics",
+    question: "What is the role of a Flight Instructor?",
+    options: ["Ground duty officer", "Engine mechanic", "To train and supervise student pilots", "To approve airport designs"],
+    correct: 2
+  },
+  {
+    id: 10,
+    section: "CPL & Aviation Basics",
+    question: "What is \"controlled airspace\"?",
+    options: ["An airspace with free movement", "Where ATC clearance is needed", "Military-only zone", "A temporary air corridor"],
+    correct: 1
   },
   {
     id: 11,
-    section: "Weather",
-    question: "What visibility is required for VFR flight?",
-    options: [
-      "1 statute mile",
-      "2 statute miles", 
-      "3 statute miles",
-      "5 statute miles"
-    ],
-    correct: 2
+    section: "CPL & Aviation Basics",
+    question: "What does a \"crosswind\" mean during takeoff or landing?",
+    options: ["Wind from directly behind", "Wind from the side", "Wind from above", "No wind"],
+    correct: 1
   },
   {
     id: 12,
-    section: "Aircraft Systems",
-    question: "What does the oil pressure gauge indicate?",
-    options: [
-      "Engine temperature",
-      "Hydraulic pressure", 
-      "Lubrication system pressure",
-      "Fuel flow rate"
-    ],
+    section: "CPL & Aviation Basics",
+    question: "What is a NOTAM?",
+    options: ["Flight time log", "Weather forecast", "Notice to Airmen about hazards or changes", "Passenger safety manual"],
     correct: 2
   },
   {
     id: 13,
-    section: "Safety",
-    question: "What is the first action to take in case of an engine failure during takeoff?",
-    options: [
-      "Maintain airspeed and land straight ahead",
-      "Turn back to the airport immediately", 
-      "Climb to gain altitude",
-      "Restart the engine"
-    ],
-    correct: 0
+    section: "CPL & Aviation Basics",
+    question: "How many types of licenses exist in Indian aviation for pilots?",
+    options: ["1", "2", "3 (SPL, PPL, CPL)", "Unlimited"],
+    correct: 2
   },
   {
     id: 14,
-    section: "Regulations",
-    question: "How long is a private pilot certificate valid?",
-    options: [
-      "2 years",
-      "5 years", 
-      "10 years",
-      "Indefinitely (until revoked)"
-    ],
-    correct: 3
+    section: "CPL & Aviation Basics",
+    question: "What is the visibility requirement to fly under VFR?",
+    options: ["1 km", "3 km", "5 km", "8 km"],
+    correct: 2
   },
   {
     id: 15,
-    section: "Aviation Fundamentals",
-    question: "What happens to air density as altitude increases?",
-    options: [
-      "Air density increases",
-      "Air density decreases", 
-      "Air density remains constant",
-      "Air density fluctuates randomly"
-    ],
-    correct: 1
+    section: "CPL & Aviation Basics",
+    question: "What is the basic fuel requirement for VFR day flight?",
+    options: ["45 minutes reserve", "30 minutes reserve", "1 hour reserve", "2 hours reserve"],
+    correct: 0
   },
   {
     id: 16,
-    section: "Navigation",
-    question: "What is magnetic variation?",
-    options: [
-      "The difference between magnetic north and true north",
-      "The difference between compass heading and magnetic heading", 
-      "The error in compass readings due to aircraft metal",
-      "The change in magnetic field over time"
-    ],
-    correct: 0
+    section: "CPL & Aviation Basics",
+    question: "Who controls Indian aviation licensing?",
+    options: ["IAF", "DGCA", "Ministry of Defense", "Airport Authority"],
+    correct: 1
   },
   {
     id: 17,
-    section: "Weather",
-    question: "What causes turbulence in clear air?",
-    options: [
-      "Temperature inversions and wind shear",
-      "Heavy precipitation", 
-      "Low visibility conditions",
-      "High humidity levels"
-    ],
-    correct: 0
+    section: "CPL & Aviation Basics",
+    question: "What is the first step to becoming a commercial pilot?",
+    options: ["Buy aircraft", "Get Class 1 Medical", "Study ground subjects", "Start flying"],
+    correct: 1
   },
   {
     id: 18,
-    section: "Aircraft Systems",
-    question: "What is the function of the carburetor in an aircraft engine?",
-    options: [
-      "To cool the engine",
-      "To mix fuel and air in proper proportions", 
-      "To generate electrical power",
-      "To reduce engine noise"
-    ],
+    section: "CPL & Aviation Basics",
+    question: "Which instrument helps maintain level flight?",
+    options: ["Altimeter", "Attitude Indicator", "Compass", "Speed Indicator"],
     correct: 1
   },
   {
     id: 19,
-    section: "Safety",
-    question: "What is the sterile cockpit rule?",
-    options: [
-      "Keeping the cockpit clean at all times",
-      "No non-essential activities below 10,000 feet", 
-      "Only certified pilots allowed in cockpit",
-      "No food or drinks in the cockpit"
-    ],
-    correct: 1
+    section: "CPL & Aviation Basics",
+    question: "What does a red light from the control tower mean on ground?",
+    options: ["Taxi", "Take off", "Stop", "Emergency"],
+    correct: 2
   },
   {
     id: 20,
-    section: "Regulations",
-    question: "What documents must a pilot carry during flight?",
-    options: [
-      "License and medical certificate only",
-      "License, medical certificate, and photo ID", 
-      "License, medical certificate, photo ID, and logbook",
-      "Only a valid driver's license"
-    ],
+    section: "CPL & Aviation Basics",
+    question: "What is the role of ATC (Air Traffic Control)?",
+    options: ["Selling tickets", "Maintaining aircraft", "Managing air traffic safely", "Weather reporting"],
+    correct: 2
+  },
+  // Situational Awareness (5 Questions)
+  {
+    id: 21,
+    section: "Behavior & Situational Awareness",
+    question: "You are on a solo flight and notice the weather is getting worse than forecasted. What should you do?",
+    options: ["Continue and hope for the best", "Land at the nearest suitable airport", "Turn around immediately", "Call someone for advice"],
     correct: 1
+  },
+  {
+    id: 22,
+    section: "Behavior & Situational Awareness",
+    question: "During your flight, you notice an unusual engine sound. Your response?",
+    options: ["Ignore it", "Land immediately at nearest airport", "Increase power to test", "Continue and monitor"],
+    correct: 1
+  },
+  {
+    id: 23,
+    section: "Behavior & Situational Awareness",
+    question: "You realize you are lost during a cross-country flight. What is your first action?",
+    options: ["Panic", "Climb to get better radio reception and navigate", "Land anywhere", "Call emergency"],
+    correct: 1
+  },
+  {
+    id: 24,
+    section: "Behavior & Situational Awareness",
+    question: "How do you handle a situation where you disagree with ATC instructions?",
+    options: ["Ignore ATC", "Follow ATC and clarify later", "Argue with ATC", "Do what you think is right"],
+    correct: 1
+  },
+  {
+    id: 25,
+    section: "Behavior & Situational Awareness",
+    question: "Which quality do you think is most important for a pilot?",
+    options: ["Discipline", "Responsibility", "Situational Awareness", "All of the above"],
+    correct: 3
+  },
+  // Motivation & Goal Alignment (5 Questions)
+  {
+    id: 26,
+    section: "Motivation & Goal Alignment",
+    question: "Why do you want to become a pilot?",
+    options: ["For prestige", "Because my family forced me", "Passion for flying and career in aviation", "To avoid other jobs"],
+    correct: 2
+  },
+  {
+    id: 27,
+    section: "Motivation & Goal Alignment",
+    question: "How do you see yourself in 5 years?",
+    options: ["Flying commercially and growing in career", "Exploring different career options", "Still deciding what I want to do", "Working in any stable job"],
+    correct: 0
+  },
+  {
+    id: 28,
+    section: "Motivation & Goal Alignment",
+    question: "What motivates you to pursue aviation?",
+    options: ["Salary", "Love for flying and responsibility", "Peer pressure", "Random choice"],
+    correct: 1
+  },
+  {
+    id: 29,
+    section: "Motivation & Goal Alignment",
+    question: "What are you willing to sacrifice to become a pilot?",
+    options: ["Time and comfort", "Nothing", "Only money", "Fun and friends"],
+    correct: 0
+  },
+  {
+    id: 30,
+    section: "Motivation & Goal Alignment",
+    question: "What is your attitude towards long hours of study and training?",
+    options: ["I accept it as part of the journey", "I dislike it", "I avoid it", "I complain"],
+    correct: 0
   }
 ];
